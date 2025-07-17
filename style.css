@@ -1,0 +1,250 @@
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+  min-width: 300px;
+  max-width: 90vw;
+  text-align: center;
+}
+.modal-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.secondary-btn {
+  background: #e5e7eb;
+  color: #222;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: background 0.2s;
+}
+.secondary-btn:hover {
+  background: #cbd5e1;
+}
+.portfolio-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  overflow: hidden;
+}
+.portfolio-table th, .portfolio-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+.portfolio-table th {
+  background: #f4f6f8;
+  font-weight: 600;
+}
+.portfolio-table tr:last-child td {
+  border-bottom: none;
+}
+.portfolio-table td button {
+  margin-right: 0.5rem;
+}
+@media (max-width: 600px) {
+  .portfolio-table th, .portfolio-table td {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
+}
+nav {
+  background: #243447;
+  padding: 0.5rem 0;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  margin: 0;
+  padding: 0 2rem;
+}
+.nav-links li {
+  display: inline;
+}
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.nav-links a:hover, .nav-links a.active {
+  background: #0078d4;
+  color: #fff;
+}
+#portfolio-form .form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+#portfolio-form .form-row:last-child {
+  justify-content: flex-end;
+  padding-top: 1rem;
+}
+#portfolio-form .form-row.full {
+  flex-direction: column;
+  align-items: stretch;
+}
+#portfolio-form .form-row:last-child {
+  margin-bottom: 0;
+}
+#portfolio-form .form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+#portfolio-form label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  min-width: 120px;
+}
+#portfolio-form label {
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+#portfolio-form input[type="text"],
+#portfolio-form input[type="date"],
+#portfolio-form textarea {
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 1rem;
+  background: #f9fafb;
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+}
+#portfolio-form textarea {
+  min-height: 60px;
+}
+#portfolio-form .primary-btn {
+  background: #0078d4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+}
+#portfolio-form .primary-btn:hover {
+  background: #005a9e;
+}
+/* Portfolio Management CSS */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+  color: #222;
+}
+header {
+  background: #2d3e50;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+footer {
+  background: #2d3e50;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+/* #portfolio-list grid removed for table layout */
+.portfolio-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.portfolio-card h3 {
+  margin: 0 0 0.5rem 0;
+}
+.portfolio-card p {
+  margin: 0.5rem 0;
+}
+.portfolio-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+button {
+  background: #2d3e50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #1a2533;
+}
+#portfolio-form {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+@media (max-width: 600px) {
+  main {
+    padding: 1rem;
+  }
+  #portfolio-list {
+    grid-template-columns: 1fr;
+  }
+  #portfolio-form {
+    padding: 1rem;
+  }
+  #portfolio-form .form-row {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
+  }
+}

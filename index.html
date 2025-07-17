@@ -1,0 +1,100 @@
+  <!-- Save Confirmation Modal -->
+  <div id="save-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <p id="save-modal-message">Portfolio entry has been saved.</p>
+      <div class="modal-actions">
+        <button id="ok-save-btn" class="primary-btn">OK</button>
+      </div>
+    </div>
+  </div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Portfolio Management</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#" id="nav-list">Portfolio List</a></li>
+        <li><a href="#" id="nav-add">Add Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="portfolio-form-section" style="display:none;">
+      <h2 class="section-title">Add / Edit Portfolio</h2>
+      <form id="portfolio-form">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Portfolio Name">
+        </div>
+        <div class="form-row">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" required placeholder="Describe your portfolio"></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" name="startDate" required>
+          </div>
+          <div class="form-group">
+            <label for="endDate">End Date</label>
+            <input type="date" id="endDate" name="endDate" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <button type="submit" class="primary-btn">Save Portfolio</button>
+          <button type="button" id="cancel-btn" class="secondary-btn">Cancel</button>
+        </div>
+      </form>
+      <input type="hidden" id="portfolio-data" name="portfolio-data">
+    </section>
+    <section id="portfolio-list-section">
+      <h2 class="section-title">Portfolio List</h2>
+      <div id="portfolio-list-wrapper">
+        <table id="portfolio-list" class="portfolio-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Portfolio rows will be rendered here by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Delete Confirmation Modal -->
+  <div id="delete-modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <p id="delete-modal-message"></p>
+      <div class="modal-actions">
+        <button id="confirm-delete-btn" class="primary-btn">Delete</button>
+        <button id="cancel-delete-btn" class="secondary-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <section style="padding: 0 2rem;">
+    <p style="margin-bottom:0.5rem;font-weight: bold;">JSON string content (for debugging purposes)</p>
+    <div id="json-display" style="background:#f9fafb;border-top:1px solid #e5e7eb;padding:1rem 0;font-size:0.95rem;word-break:break-all;"></div>
+  </section>
+  <footer>
+    <p>&copy; 2025 Portfolio Management App</p>
+    <p>This is a Microsoft course project</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
